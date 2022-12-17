@@ -1,0 +1,18 @@
+print('Bem vindo a loja do Alexandre Statuti')
+valor_produto = float (input( 'Entre com o valor desejado: '))
+qtd_produto = int(input('Entre com a quantidade desejada'))
+desconto_produto = 0
+
+if qtd_produto <= 4: # Outra maneira if qtd_produto < 5:
+  desconto_produto = 0.00
+elif 5 <= qtd_produto < 20: # maneira classica ==> elif qtd_produto >= 5 and qtd_produto < 20:
+    desconto_produto = 0.03 #porcentagem de desconto 
+elif 20 <= qtd_produto < 100: 
+    desconto_produto = 0.06
+else:
+    desconto_produto = 0.10
+
+total_sem_desconto = valor_produto * qtd_produto
+print('O valor total sem desconto é de: R$  {:.2f}'.format(total_sem_desconto))
+total_com_desconto = total_sem_desconto - total_sem_desconto * desconto_produto
+print('O valor total com desconto é de: R$  {:.2f}'.format(total_com_desconto))
